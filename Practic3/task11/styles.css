@@ -1,0 +1,27 @@
+
+p.bigBoldUnderline:first-child {
+    color: purple;
+    text-decoration-line: underline;
+    font-size: large;
+    font-weight: 900;
+}
+
+div.large::first-letter {
+    font-size: x-large;
+    display: inline;
+}
+
+p.highlight:hover {
+    color: #960c2e;
+    font-size: x-large;
+}
+
+p::first-letter {
+    color: #DDD321;
+    font-size: xx-large;
+}
+
+::marker { 
+    color: rgb(135, 56, 199);
+    font-size: 15px;
+}

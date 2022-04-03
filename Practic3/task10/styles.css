@@ -1,0 +1,20 @@
+
+p.imageBackground {
+    background-image: url("/Practic3/img/calculations.png");
+}
+
+p.rgbaBackground {
+    background-color: rgba(23, 222, 111, 0.3);
+}
+
+p.hexBackground {
+    background-color: #DDDD35;
+}
+
+p.hslaBackground {
+    background-color: hsla(281, 88%, 27%, 0.7);
+}
+
+p.colorNameBackground {
+    background-color: brown;
+}

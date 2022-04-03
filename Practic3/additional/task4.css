@@ -1,0 +1,31 @@
+
+.bigBoldUnderline {
+    text-decoration-line: underline;
+    font-size: large;
+    font-weight: 900;
+}
+
+.large {
+    font-size: x-large;
+    display: inline;
+}
+
+.oblique {
+    font-style: oblique;
+    display: inline;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    display: inline;
+}
+
+.monospace {
+    font-family: monospace;
+}
+.sup {
+    vertical-align: super;
+    font-size: 18px;
+    display: inline;
+    color: blueviolet;
+}

@@ -1,0 +1,41 @@
+
+p.dotted {
+    border-style: dotted;
+    border-color: purple;
+    border-width: 7px;
+}
+p.dashed {
+    border-style: dashed;
+    border-color: purple;
+    border-width: 7px;
+}
+p.solid {
+    border-style: solid;
+    border-color: purple;
+    border-width: 7px;
+}
+p.double {
+    border-style: double;
+    border-color: purple;
+    border-width: 7px;
+}
+p.groove {
+    border-style: groove;
+    border-color: purple;
+    border-width: 7px;
+}
+p.ridge {
+    border-style: ridge;
+    border-color: purple;
+    border-width: 7px;
+}
+p.inset {
+    border-style: inset;
+    border-color: purple;
+    border-width: 7px;
+}
+p.outset {
+    border-style: outset;
+    border-color: purple;
+    border-width: 7px;
+}

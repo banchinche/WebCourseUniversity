@@ -1,0 +1,40 @@
+
+.bigBoldUnderlineInline {
+    text-decoration-line: underline;
+    font-size: large;
+    font-weight: 900;
+    display: inline;
+}
+
+
+.xLargeInline {
+    font-size: x-large;
+    display: inline;
+}
+
+.xxLargeInline {
+    font-size: xx-large;
+    display: inline;
+}
+
+.xLargeInlineMonospace {
+    font-size: x-large;
+    font-family: monospace;
+    display: inline;
+}
+
+.obliqueInline {
+    font-style: oblique;
+    display: inline;
+}
+
+.lineThroughInline {
+    text-decoration: line-through;
+    display: inline;
+}
+
+.bigUnderlineInline {
+    text-decoration-line: underline;
+    font-size: large;
+    display: inline;
+}
