@@ -1,0 +1,75 @@
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+    margin: 20px;
+}
+
+label {
+    display: flex;
+    float: left;
+    margin: 20px;
+}
+
+select, input {
+    width: 400px;
+    margin: 20px;
+    height: 20px;
+}
+
+.personalInfo {
+    color: blue;
+    overflow: visible;
+    text-align: center;
+    height: 1px;
+    width: 70%;
+    size: 20em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.personalInfo::after {
+    background: white;
+    content: "Personal information";
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+    right: 410px;
+}
+
+.address {
+    color: blue;
+    overflow: visible;
+    text-align: center;
+    height: 1px;
+    width: 70%;
+    size: 20em;
+    margin-top: 30px;
+}
+.address::after {
+    background: white;
+    content: "Address";
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+    right: 410px;
+    font-weight: bold;
+}
+
+.required{
+    font-weight: bold;
+    display: flex;
+    float: left;
+}
+
+.required::before {
+    content: "*";
+}
+
+.inline {
+    display: inline-block;
+}
