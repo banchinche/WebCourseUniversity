@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13-alpine
+    container_name: database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5500:5432
+    networks:
+      - db-bridge
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=library
+  pgadmin4:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "andrew.hrimov@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "1"
+    networks:
+      - db-bridge
+
+networks:
+    db-bridge:
+        driver: bridge
+volumes:
+  postgres_data:
