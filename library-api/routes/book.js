@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express.Router()
+const Router = require('restify-router').Router;
+const router = new Router();
 const db = require('../database')
 
 router.get("/", function(req, res) {
@@ -7,10 +7,10 @@ router.get("/", function(req, res) {
         include: db.Genre
     })
         .then( books => {
-            res.status(200).send(JSON.stringify(books));
+            res.send(200, JSON.stringify(books));
         })
         .catch( error => {
-            res.status(500).send(JSON.stringify(error));
+            res.send(500, JSON.stringify(error));
         })
 })
 
@@ -20,10 +20,10 @@ router.get("/:id", function(req, res) {
             include: db.Genre
         })
         .then( book => {
-            res.status(200).send(JSON.stringify(book));
+            res.send(200, JSON.stringify(book));
         })
         .catch( error => {
-            res.status(500).send(JSON.stringify(error));
+            res.send(500, JSON.stringify(error));
         })
 })
 
@@ -40,13 +40,13 @@ router.post("/", function(req, res) {
             const associations = req.body.genres.map((id) => ({"BookId": book.id, "GenreId": id}))
             db.BookGenre.bulkCreate(associations)
             .then(bookGenre => {
-                res.status(200).send(JSON.stringify(book))
+                res.send(200, JSON.stringify(book))
             }).catch( error => {
-                res.status(500).send(JSON.stringify(error))
+                res.send(500, JSON.stringify(error));
             })
         })
         .catch( error => {
-            res.status(500).send(JSON.stringify(error))
+            res.send(500, JSON.stringify(error));
         })
 })
 
@@ -67,27 +67,27 @@ router.put("/:id", function(req, res) {
             const associations = req.body.genres.map((id) => ({"BookId": book.id, "GenreId": id}))
             db.BookGenre.bulkCreate(associations)
             .then(bookGenre => {
-                res.status(200).send(JSON.stringify(book))
+                res.send(200, JSON.stringify(book))
             }).catch( error => {
-                res.status(500).send(JSON.stringify(error))
+                res.send(500, JSON.stringify(error));
             })
         })
         .catch( error => {
-            res.status(500).send(JSON.stringify(error))
+            res.send(500, JSON.stringify(error));
         })
 })
 
-router.delete("/:id", function(req, res) {
+router.del("/:id", function(req, res) {
     db.Book.destroy({
         where: {
             id: req.params.id
         }
     })
         .then(() => {
-            res.status(204).send();
+            res.send(204);
         })
         .catch( error => {
-            res.status(500).send(JSON.stringify(error));
+            res.send(500, JSON.stringify(error));
         })
 })
 
