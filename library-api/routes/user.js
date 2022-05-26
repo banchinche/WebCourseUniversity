@@ -1,6 +1,6 @@
-var express = require('express')
-var router = express.Router()
-var db = require('../database')
+const express = require('express')
+const router = express.Router()
+const db = require('../database')
 
 router.get("/", function(req, res) {
     db.User.findAll()
@@ -16,20 +16,6 @@ router.get("/:id", function(req, res) {
     db.User.findByPk(req.params.id)
         .then( user => {
             res.status(200).send(JSON.stringify(user));
-        })
-        .catch( error => {
-            res.status(500).send(JSON.stringify(error));
-        })
-})
-
-router.post("/", function(req, res) {
-    console.log(req.body)
-    db.User.create({
-        email: req.body.email,
-        password: req.body.password
-    })
-        .then( user => {
-            res.status(201).send(JSON.stringify(user));
         })
         .catch( error => {
             res.status(500).send(JSON.stringify(error));
