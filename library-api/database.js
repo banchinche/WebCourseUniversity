@@ -123,5 +123,7 @@ module.exports = {
     Director: Director,
     User: User,
     Genre: Genre,
-    Book: Book
+    Book: Book,
+    UserBook: UserBook,
+    BookGenre: BookGenre
 }
